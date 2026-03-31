@@ -171,23 +171,30 @@ header {
     flex: 1;
     display: flex;
     flex-direction: column; 
-    align-items: center; 
+    align-items: flex-start; 
     justify-content: center;
-    text-align: center; 
+    text-align: left;  
     width: 100%;
-    padding: 20px 0; /* Додаємо невеликий відступ зверху/знизу */
+    padding: 20px 0;
 }
 
 .description-center {
-    font-weight: 400; /* Збільшено з 200 до 400 для кращої читабельності */
-    font-size: 28px;  /* Збільшено з 24px */
+    font-weight: 400;
+    font-size: 28px; 
     color: #000000;
     text-shadow: none;    
-    text-align: center;
-    margin: 0 auto 20px auto; /* Центрування через auto та збільшений відступ знизу */
+    text-align: left;      
+    margin: 0 0 10px 0;     
     line-height: 1.6;    
-    width: 90%;       /* Обмежуємо ширину для гарного вигляду на великих екранах */
+    width: 90%;       
     max-width: 1000px;
+}
+
+.description-sub {
+    font-size: 22px; 
+    color: #000000;
+    margin-bottom: 3px;
+    text-align: left;
 }
 
 .download-link {
