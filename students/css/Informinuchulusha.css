@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600;700&display=swap'); 
+/*імпортуємо шрифт для сайту*/
+
+body{
+	color: #000;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+}
+
+.container {
+	max-width:1230px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+header {
+	padding: 0px;
+	background-color:#405a1a;
+	border-bottom: 1px solid #333842;
+}
+
+.header-nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav {
+	flex-grow: 1;
+	position: relative;
+}
+
+
+.logo {
+	font-weight: 700;
+	font-size: 17px;
+	color: #e7e7e7;
+	letter-spacing: 1.5px;
+}
+
+/*Навігація*/
+
+.nav-list {
+	display: flex;
+	column-gap: 0;
+	font-weight: 200;
+	font-size: 24px;
+	justify-content: center;
+    	list-style: none;
+    	padding: 0;
+    	margin: 0;
+}
+
+.nav-item {
+    	position: relative;
+    	text-align: center;
+    	transition: background-color 0.3s ease;
+}
+
+.nav-link {
+    color: #e7e7e7;
+    text-decoration: none;
+    display: flex;  
+    align-items: center;
+    justify-content: center; 
+    min-height: 100%; 
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+    height: 80px;
+}
+
+/* ЕФЕКТИ НАВЕДЕННЯ ДЛЯ ОСНОВНИХ ПУНКТІВ */
+
+.nav-item:hover {
+    	background-color: #557721;
+}
+
+.nav-item:hover > .nav-link {
+    	color: #ffffff;
+    	border-bottom-color: #6d8e40;
+}
+
+
+/*Стилі для Підменю*/
+.submenu {
+    	position: absolute;
+    	top: 100%;
+    	left: 0;
+    	background-color: #557721;
+    	list-style: none;
+    	padding: 0;
+    	margin: 0;
+    	min-width: 280px;
+    	z-index: 20;
+    	display: none;
+    	opacity: 0;
+    	transition: opacity 0.3s ease;
+}
+
+.submenu-item {
+    	display: block;
+    	text-align: left;
+}
+
+.submenu-link {
+    	color: #e7e7e7;
+    	text-decoration: none;
+    	display: block;
+    	font-size: 18px;
+    	padding: 10px 15px;
+}
+
+.submenu-item:hover .submenu-link {
+    	color: #ffffff;
+}
+
+.nav-item.has-submenu:hover .submenu {
+    	display: block;
+    	opacity: 1;
+}
+
+
+/*2 секція*/
+
+.description{
+	background-color: white;
+	min-height: 90vh;
+	display: block;
+	padding-top: 50px;
+}
+
+.description-description{
+	font-weight: 700;
+	font-size: 55px;
+	color: #835325;
+	text-shadow: 1px 1px 2px #835325;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.description-main {
+    /* ЗАЛИШАЄМО FLEX, ЯКЩО ПОТРІБНО */
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.description-content {
+    /* Додаємо центрування вмісту */
+    text-align: center; 
+	flex: 1;
+	max-width: 100%;
+}
+
+.description-size {
+    /* Скасовуємо text-align: center, щоб текст був вирівняний по ширині */
+    text-align: justify;
+    /*...інші стилі тексту...*/
+	font-weight: 200;
+	font-size: 24px;
+	color: #000000;
+	text-shadow: none;
+	margin-top: 15px;
+	line-height: 1.5;
+	text-indent: 60px;
+}
+
+.description-image-container {
+    max-width: 520px; 
+    height: auto;
+    margin: 40px auto;
+    border: 5px solid #835325;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    overflow: hidden;
+    
+    /* Гарантуємо, що це блочний елемент, який можна центрувати */
+    display: block; 
+}
+
+.description-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+/*Футер*/
+
+.contacts {
+    	background-color: #405a1a; 
+    	color: #aeb3be; 
+    	padding: 10px 0;
+    	font-size: 16px;
+	border-top: 1px solid #333a41;
+}
+
+.footer-row-bottom{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.social-links-wrapper {
+    	display: flex; 
+    	text-align: left;
+}
+
+.social-link {
+    	color: #aeb3be; 
+    	text-decoration: none;
+    	display: flex;
+}
+
+.footer-row-bottom p {
+    	margin: 0; 
+    	font-weight: bold; 
+    	text-align: left;
+	color: #e7e7e7;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	flex-wrap: wrap;
+}
